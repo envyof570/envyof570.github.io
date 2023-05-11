@@ -1,0 +1,102 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("assets/images/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+header, .header-image {
+    width: 100%;
+    height: auto;
+}
+
+.header-image {
+    max-width: 50%;
+    margin: auto;
+    display: block;
+}
+
+.music-widgets, .bio, .links {
+    margin-bottom: 2rem;
+}
+
+.music-widgets iframe {
+    width: 70%;
+    margin-bottom: 2rem;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px; /* Adds rounded corners */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.music-widgets iframe:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.bio p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(105, 105, 105, 0.6); /* darker gray with a bit of transparency */
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bio p:hover {
+    transform: scale(1.05);
+}
+
+.links h2 {
+    font-size: 1.25rem;
+    color: #1DB954; /* Spotify Green */
+}
+
+.links ul {
+    list-style: none;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(105, 105, 105, 0.6); /* darker gray with a bit of transparency */
+    border-radius: 12px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.links ul:hover {
+    transform: scale(1.05);
+}
+
+.links li {
+    margin: 0.75rem 0;
+}
+
+.links a {
+    color: #ADD8E6; /* Light Blue */
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.links a:hover {
+    transform: scale(1.05);
+}
