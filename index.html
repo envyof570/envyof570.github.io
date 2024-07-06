@@ -1,67 +1,181 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary Meta Tags -->
-    <title>TeeJay Royal Music HUB</title>
-    <meta name="title" content="TeeJay Royal Music HUB">
-    <meta name="description" content="A central location for music and up to date info about TeeJay Royal.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.teejayroyal.com/">
-    <meta property="og:title" content="TeeJay Royal Music HUB">
-    <meta property="og:description" content="A central location for music and up to date info about TeeJay Royal.">
-    <meta property="og:image" content="https://i.ibb.co/7jdYBr9/webcard.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.teejayroyal.com/">
-    <meta property="twitter:title" content="TeeJay Royal Music HUB">
-    <meta property="twitter:description" content="A central location for music and up to date info about TeeJay Royal.">
-    <meta property="twitter:image" content="https://i.ibb.co/7jdYBr9/webcard.png">
-
-    <link rel="stylesheet" href="style.css">
+    <base href="https://websim.ai/teejay-royal?background=gradient-black-gray-stars&amp;header=TeeJay%2520Royal&amp;widget1=%3Ciframe%2520style=%22border-radius:12px%22%2520src=%22https://open.spotify.com/embed/track/1OSKs7XATSJdDwWdJZra4P?utm_source=generator&amp;theme=0%22%2520width=%22100%25%22%2520height=%22352%22%2520frameBorder=%220%22%2520allowfullscreen=%22%22%2520allow=%22autoplay;%2520clipboard-write;%2520encrypted-media;%2520fullscreen;%2520picture-in-picture%22%2520loading=%22lazy%22%3E%3C/iframe%3E&amp;widget2=%3Ciframe%2520width=%22560%22%2520height=%22315%22%2520src=%22https://www.youtube.com/embed/h6Fffmu8COU?si=OudlZUXy14rINUIi%22%2520title=%22YouTube%2520video%2520player%22%2520frameborder=%220%22%2520allow=%22accelerometer;%2520autoplay;%2520clipboard-write;%2520encrypted-media;%2520gyroscope;%2520picture-in-picture;%2520web-share%22%2520referrerpolicy=%22strict-origin-when-cross-origin%22%2520allowfullscreen%3E%3C/iframe%3E&amp;widget3=%3Ciframe%2520style=%22border-radius:12px%22%2520src=%22https://open.spotify.com/embed/album/5iPoQn5IYryqYFdVdGk1EN?utm_source=generator&amp;theme=0%22%2520width=%22100%25%22%2520height=%22352%22%2520frameBorder=%220%22%2520allowfullscreen=%22%22%2520allow=%22autoplay;%2520clipboard-write;%2520encrypted-media;%2520fullscreen;%2520picture-in-picture%22%2520loading=%22lazy%22%3E%3C/iframe%3E">
+    <title>TeeJay Royal - Official Artist Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .gradient-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #000000, #333333, #000000, #333333);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: twinkle 5s infinite;
+        }
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        header {
+            text-align: center;
+            padding: 3rem 0 1rem;
+            font-size: 6.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 25px rgba(255,255,255,0.7);
+            letter-spacing: 4px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ffffff;
+            border-radius: 25px;
+        }
+        .social-links a:hover {
+            color: #ff6b6b;
+            transform: scale(1.05);
+            border-color: #ff6b6b;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .widget {
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(255,255,255,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <img src="assets/images/teejay_royal.png" alt="TeeJay Royal" class="header-image">
-    </header>
-
-    <!-- YouTube Video -->
-    <section class="music-widgets">
-        <iframe width="734" height="413" src="https://www.youtube.com/embed/GcTX5od4zvk" title="TeeJay Royal - Tony Got A Gatti (Official Visualizer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
-
-    <!-- Spotify Widget -->
-    <section class="music-widgets">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1cdVHPR51hL5utMyBJbtHk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </section>
-
-    <!-- SoundCloud Widget -->
-    <section class="music-widgets">
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/539090166&color=%23373737&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/wavyeight" title="Wave" target="_blank" style="color: #cccccc; text-decoration: none;"></a> · <a href="https://soundcloud.com/wavyeight/chanel-handheld" title="Chanel Handheld" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-    </section>
-
-    <!-- Bio -->
-    <section class="bio">
-        <img src="assets/images/bio.png" alt="Bio" class="header-image">
-        <p>
-            TeeJay Royal is a 26-year-old rapper from Williamsport, Pennsylvania, who has been creating music since 2008. He recently expanded his reach beyond SoundCloud and now puts his unique blend of hip hop, psychedelic rock, jazz, and electronic music on various platforms. All of his music is home recorded, with recording, mixing, and mastering done in-house, and all distribution and advertising handled by TeeJay himself.
-        </p>
-        </section>
-        <!-- Links -->
-<section class="links">
-    <img src="assets/images/links.png" alt="Links" class="header-image">
-    <ul id="links-list">
-    </ul>
-</section>
-
-<script src="app.js"></script>
-
+    <div class="gradient-background"></div>
+    <div class="stars">
+        <div class="star" style="top: 10%; left: 20%;"></div>
+        <div class="star" style="top: 15%; left: 50%;"></div>
+        <div class="star" style="top: 25%; left: 80%;"></div>
+        <div class="star" style="top: 35%; left: 30%;"></div>
+        <div class="star" style="top: 45%; left: 70%;"></div>
+        <div class="star" style="top: 55%; left: 40%;"></div>
+        <div class="star" style="top: 65%; left: 60%;"></div>
+        <div class="star" style="top: 75%; left: 10%;"></div>
+        <div class="star" style="top: 85%; left: 90%;"></div>
+        <div class="star" style="top: 95%; left: 25%;"></div>
+    </div>
+    <header>TeeJay Royal</header>
+    <div class="social-links">
+        <a href="https://soundcloud.com/wavyeight">Soundcloud</a>
+        <a href="https://open.spotify.com/artist/1cdVHPR51hL5utMyBJbtHk">Spotify</a>
+        <a href="https://www.youtube.com/@teejayroyal">Youtube</a>
+        <a href="https://music.apple.com/us/artist/teejay-royal/1667072862">Apple Music</a>
+    </div>
+    <div class="content">
+        <div class="widget youtube-container">
+            <iframe src="https://www.youtube.com/embed/h6Fffmu8COU?si=OudlZUXy14rINUIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+        </div>
+        <div class="widget">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OSKs7XATSJdDwWdJZra4P?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="widget">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5iPoQn5IYryqYFdVdGk1EN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="widget">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266091547&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
+                <a href="https://soundcloud.com/wavyeight/sets/bloomsville-grove-remastered" title="Bloomsville Grove (Remastered)" target="_blank" style="color: #cccccc; text-decoration: none;">Bloomsville Grove (Remastered)</a>
+            </div>
+        </div>
+        <div class="widget">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266795936&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
+                <a href="https://soundcloud.com/wavyeight/sets/coming-home-remastered" title="Coming Home (Remastered)" target="_blank" style="color: #cccccc; text-decoration: none;">Coming Home (Remastered)</a>
+            </div>
+        </div>
+        <div class="widget">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/280339507%3Fsecret_token%3Ds-LSmvT&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
+                <a href="https://soundcloud.com/wavyeight/sets/castles-in-port/s-LSmvT" title="Castles In Port" target="_blank" style="color: #cccccc; text-decoration: none;">Castles In Port</a>
+            </div>
+        </div>
+        <div class="widget">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/286484835&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
+                <a href="https://soundcloud.com/wavyeight/sets/tiffany-ep" title="Tiffany EP" target="_blank" style="color: #cccccc; text-decoration: none;">Tiffany EP</a>
+            </div>
+        </div>
+        <div class="widget">
+            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/656476728&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
+                <a href="https://soundcloud.com/wavyeight/sets/strangeworld" title="Strangeworld" target="_blank" style="color: #cccccc; text-decoration: none;">Strangeworld</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
