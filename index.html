@@ -1,181 +1,299 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <base href="https://websim.ai/teejay-royal?background=gradient-black-gray-stars&amp;header=TeeJay%2520Royal&amp;widget1=%3Ciframe%2520style=%22border-radius:12px%22%2520src=%22https://open.spotify.com/embed/track/1OSKs7XATSJdDwWdJZra4P?utm_source=generator&amp;theme=0%22%2520width=%22100%25%22%2520height=%22352%22%2520frameBorder=%220%22%2520allowfullscreen=%22%22%2520allow=%22autoplay;%2520clipboard-write;%2520encrypted-media;%2520fullscreen;%2520picture-in-picture%22%2520loading=%22lazy%22%3E%3C/iframe%3E&amp;widget2=%3Ciframe%2520width=%22560%22%2520height=%22315%22%2520src=%22https://www.youtube.com/embed/h6Fffmu8COU?si=OudlZUXy14rINUIi%22%2520title=%22YouTube%2520video%2520player%22%2520frameborder=%220%22%2520allow=%22accelerometer;%2520autoplay;%2520clipboard-write;%2520encrypted-media;%2520gyroscope;%2520picture-in-picture;%2520web-share%22%2520referrerpolicy=%22strict-origin-when-cross-origin%22%2520allowfullscreen%3E%3C/iframe%3E&amp;widget3=%3Ciframe%2520style=%22border-radius:12px%22%2520src=%22https://open.spotify.com/embed/album/5iPoQn5IYryqYFdVdGk1EN?utm_source=generator&amp;theme=0%22%2520width=%22100%25%22%2520height=%22352%22%2520frameBorder=%220%22%2520allowfullscreen=%22%22%2520allow=%22autoplay;%2520clipboard-write;%2520encrypted-media;%2520fullscreen;%2520picture-in-picture%22%2520loading=%22lazy%22%3E%3C/iframe%3E">
-    <title>TeeJay Royal - Official Artist Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://websim.ai/teejay-royal">
+    <title>TeeJay Royal - Sonic Innovator</title>
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Montserrat:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-color: #00f3ff;
+            --secondary-color: #ff00e6;
+            --tertiary-color: #ffe600;
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            color: #ffffff;
-            min-height: 100vh;
-            position: relative;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
             overflow-x: hidden;
         }
-        .gradient-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #000000, #333333, #000000, #333333);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-        }
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: #ffffff;
-            border-radius: 50%;
-            animation: twinkle 5s infinite;
-        }
-        @keyframes twinkle {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
+        
         header {
-            text-align: center;
-            padding: 3rem 0 1rem;
-            font-size: 6.5rem;
-            font-weight: bold;
-            text-shadow: 0 0 25px rgba(255,255,255,0.7);
-            letter-spacing: 4px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
+        
+        #particle-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .artist-name {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            color: var(--text-color);
+            text-shadow: 0 0 10px var(--primary-color);
+            animation: textGlow 2s infinite alternate;
+        }
+        
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px var(--primary-color);
+            }
+            to {
+                text-shadow: 0 0 20px var(--primary-color), 0 0 30px var (--secondary-color);
+            }
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 2rem;
+            margin-top: 2rem;
         }
+        
         .social-links a {
-            color: #ffffff;
+            color: var(--text-color);
             text-decoration: none;
-            font-size: 1.3rem;
-            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 1rem;
             padding: 0.5rem 1rem;
-            border: 2px solid #ffffff;
+            border: 2px solid var(--primary-color);
             border-radius: 25px;
-        }
-        .social-links a:hover {
-            color: #ff6b6b;
-            transform: scale(1.05);
-            border-color: #ff6b6b;
-        }
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .widget {
-            margin-bottom: 2rem;
-            box-shadow: 0 0 20px rgba(255,255,255,0.1);
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: rgba(0,0,0,0.5);
-        }
-        .youtube-container {
+            transition: all 0.3s ease;
             position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+            z-index: 1;
         }
-        .youtube-container iframe {
+        
+        .social-links a::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 0%;
             height: 100%;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .social-links a:hover::before {
+            width: 100%;
+        }
+        
+        .social-links a:hover {
+            color: var(--bg-color);
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .widget {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .widget iframe {
+            width: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+        
+        .youtube-widget {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+        
+        .other-widgets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .artist-name {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="gradient-background"></div>
-    <div class="stars">
-        <div class="star" style="top: 10%; left: 20%;"></div>
-        <div class="star" style="top: 15%; left: 50%;"></div>
-        <div class="star" style="top: 25%; left: 80%;"></div>
-        <div class="star" style="top: 35%; left: 30%;"></div>
-        <div class="star" style="top: 45%; left: 70%;"></div>
-        <div class="star" style="top: 55%; left: 40%;"></div>
-        <div class="star" style="top: 65%; left: 60%;"></div>
-        <div class="star" style="top: 75%; left: 10%;"></div>
-        <div class="star" style="top: 85%; left: 90%;"></div>
-        <div class="star" style="top: 95%; left: 25%;"></div>
-    </div>
-    <header>TeeJay Royal</header>
-    <div class="social-links">
-        <a href="https://soundcloud.com/wavyeight">Soundcloud</a>
-        <a href="https://open.spotify.com/artist/1cdVHPR51hL5utMyBJbtHk">Spotify</a>
-        <a href="https://www.youtube.com/@teejayroyal">Youtube</a>
-        <a href="https://music.apple.com/us/artist/teejay-royal/1667072862">Apple Music</a>
-    </div>
-    <div class="content">
-        <div class="widget youtube-container">
-            <iframe src="https://www.youtube.com/embed/h6Fffmu8COU?si=OudlZUXy14rINUIi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-        </div>
-        <div class="widget">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1OSKs7XATSJdDwWdJZra4P?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="widget">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5iPoQn5IYryqYFdVdGk1EN?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="widget">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266091547&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
-                <a href="https://soundcloud.com/wavyeight/sets/bloomsville-grove-remastered" title="Bloomsville Grove (Remastered)" target="_blank" style="color: #cccccc; text-decoration: none;">Bloomsville Grove (Remastered)</a>
+    <header>
+        <canvas id="particle-canvas"></canvas>
+        <div class="container">
+            <h1 class="artist-name">TeeJay Royal</h1>
+            <div class="social-links">
+                <a href="https://soundcloud.com/wavyeight">Soundcloud</a>
+                <a href="https://open.spotify.com/artist/1cdVHPR51hL5utMyBJbtHk">Spotify</a>
+                <a href="https://www.youtube.com/@teejayroyal">Youtube</a>
+                <a href="https://music.apple.com/us/artist/teejay-royal/1667072862">Apple Music</a>
             </div>
         </div>
-        <div class="widget">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266795936&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
-                <a href="https://soundcloud.com/wavyeight/sets/coming-home-remastered" title="Coming Home (Remastered)" target="_blank" style="color: #cccccc; text-decoration: none;">Coming Home (Remastered)</a>
+    </header>
+    
+    <main class="container">
+        <div class="content">
+            <div class="widget youtube-widget">
+                <iframe src="https://www.youtube.com/embed/h6Fffmu8COU?si=OudlZUXy14rINUIi" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" height="100%" width="100%"></iframe>
+            </div>
+            
+            <div class="other-widgets">
+                <div class="widget">
+                    <iframe src="https://open.spotify.com/embed/track/1OSKs7XATSJdDwWdJZra4P?utm_source=generator&amp;theme=0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" height="352"></iframe>
+                </div>
+                
+                <div class="widget">
+                    <iframe src="https://open.spotify.com/embed/album/5iPoQn5IYryqYFdVdGk1EN?utm_source=generator&amp;theme=0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" height="352"></iframe>
+                </div>
+                
+                <div class="widget">
+                    <iframe height="450" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266091547&amp;color=%2300f3ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
+                
+                <div class="widget">
+                    <iframe height="450" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/266795936&amp;color=%2300f3ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
+                
+                <div class="widget">
+                    <iframe height="450" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/280339507%3Fsecret_token%3Ds-LSmvT&amp;color=%2300f3ff&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                </div>
+                
+                <div class="widget">
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/656476728&color=%23040000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · <a href="https://soundcloud.com/wavyeight/sets/strangeworld" title="Strangeworld" target="_blank" style="color: #cccccc; text-decoration: none;">Strangeworld</a></div>
+                </div>
+                
+                <div class="widget">
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/858018598&color=%23040000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/envyof570" title="ENVY" target="_blank" style="color: #cccccc; text-decoration: none;">ENVY</a> · <a href="https://soundcloud.com/envyof570/sirenhead-prod-by-shyguymadeit-envy" title="SIRENHEAD (Prod. By ShyGuyMadeIt & ENVY)" target="_blank" style="color: #cccccc; text-decoration: none;">SIRENHEAD (Prod. By ShyGuyMadeIt & ENVY)</a></div>
+                </div>
+                
+                <div class="widget">
+                    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/694984330&color=%23040000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/envyof570" title="ENVY" target="_blank" style="color: #cccccc; text-decoration: none;">ENVY</a> · <a href="https://soundcloud.com/envyof570/premium-liquor" title="Premium Liquor" target="_blank" style="color: #cccccc; text-decoration: none;">Premium Liquor</a></div>
+                </div>
             </div>
         </div>
-        <div class="widget">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/280339507%3Fsecret_token%3Ds-LSmvT&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
-                <a href="https://soundcloud.com/wavyeight/sets/castles-in-port/s-LSmvT" title="Castles In Port" target="_blank" style="color: #cccccc; text-decoration: none;">Castles In Port</a>
-            </div>
-        </div>
-        <div class="widget">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/286484835&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
-                <a href="https://soundcloud.com/wavyeight/sets/tiffany-ep" title="Tiffany EP" target="_blank" style="color: #cccccc; text-decoration: none;">Tiffany EP</a>
-            </div>
-        </div>
-        <div class="widget">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/656476728&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                <a href="https://soundcloud.com/wavyeight" title="TeeJay Royal" target="_blank" style="color: #cccccc; text-decoration: none;">TeeJay Royal</a> · 
-                <a href="https://soundcloud.com/wavyeight/sets/strangeworld" title="Strangeworld" target="_blank" style="color: #cccccc; text-decoration: none;">Strangeworld</a>
-            </div>
-        </div>
-    </div>
+    </main>
+
+    <script>
+        // Particle animation
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 5 + 1;
+                this.speedX = Math.random() * 3 - 1.5;
+                this.speedY = Math.random() * 3 - 1.5;
+                this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.size > 0.2) this.size -= 0.1;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        const particleArray = [];
+
+        function init() {
+            for (let i = 0; i < 100; i++) {
+                particleArray.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particleArray.length; i++) {
+                particleArray[i].update();
+                particleArray[i].draw();
+                
+                if (particleArray[i].size <= 0.2) {
+                    particleArray.splice(i, 1);
+                    i--;
+                    particleArray.push(new Particle());
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+
+        // Responsive canvas
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            init();
+        });
+
+        // Scroll animation for widgets
+        const widgets = document.querySelectorAll('.widget');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        widgets.forEach(widget => {
+            widget.style.opacity = 0;
+            widget.style.transform = 'translateY(50px)';
+            widget.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(widget);
+        });
+    </script>
 </body>
 </html>
